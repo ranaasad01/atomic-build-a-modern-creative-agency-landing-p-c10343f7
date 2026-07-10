@@ -103,12 +103,11 @@ export default function Footer() {
               <span>{APP_EMAIL}</span>
             </a>
             <Link
-              href={getHref("#contact")}
-              onClick={(e) => handleAnchorClick(e, "#contact")}
-              className="inline-flex items-center gap-2 px-5 py-2.5 bg-amber-500 text-black text-sm font-bold rounded-sm hover:bg-amber-400 transition-all duration-200 hover:gap-3 group"
+              href="/contact"
+              className="inline-flex items-center gap-2 px-5 py-2.5 bg-amber-500 text-black text-sm font-bold rounded-sm hover:bg-amber-400 transition-all duration-200 hover:scale-105 active:scale-95"
             >
               Start a Project
-              <ArrowRight size={14} className="transition-transform duration-200 group-hover:translate-x-0.5" />
+              <ArrowRight size={14} />
             </Link>
           </motion.div>
         </div>
@@ -121,7 +120,7 @@ export default function Footer() {
             &copy; {currentYear} {APP_NAME}. All rights reserved.
           </p>
           <p className="text-xs text-white/25">
-            Crafted with intention.
+            Crafted with care &mdash; somewhere between midnight and dawn.
           </p>
         </div>
       </div>

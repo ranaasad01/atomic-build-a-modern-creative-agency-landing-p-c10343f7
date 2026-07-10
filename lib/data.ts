@@ -14,10 +14,12 @@ export const APP_EMAIL = "hello@northwindstudio.com";
 
 export const navLinks: NavLink[] = [
   { label: "Home", href: "/" },
-  { label: "Services", href: "#services" },
-  { label: "Work", href: "#work" },
-  { label: "About", href: "#about" },
-  { label: "Contact", href: "#contact" },
+  { label: "Services", href: "/services" },
+  { label: "Work", href: "/work" },
+  { label: "Case Study", href: "/case-study" },
+  { label: "Blog", href: "/blog" },
+  { label: "Careers", href: "/careers" },
+  { label: "Contact", href: "/contact" },
 ];
 
 export const socialLinks: SocialLink[] = [
@@ -28,4 +30,4 @@ export const socialLinks: SocialLink[] = [
 ];
 
 export const CTA_LABEL = "Start a Project";
-export const CTA_HREF = "#contact";
+export const CTA_HREF = "/contact";

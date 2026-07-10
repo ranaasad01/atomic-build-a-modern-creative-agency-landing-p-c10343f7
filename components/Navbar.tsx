@@ -34,11 +34,17 @@ export default function Navbar() {
     }
   }
 
-  function getHref(href: string) {
+  function getHref(href: string): string {
     if (href.startsWith("#") && pathname !== "/") {
       return "/" + href;
     }
     return href;
+  }
+
+  function isActive(href: string): boolean {
+    if (href.startsWith("#")) return false;
+    if (href === "/") return pathname === "/";
+    return pathname.startsWith(href);
   }
 
   return (
@@ -74,9 +80,16 @@ export default function Navbar() {
                 key={link.href}
                 href={getHref(link.href)}
                 onClick={(e) => handleAnchorClick(e, link.href)}
-                className="px-4 py-2 text-sm font-medium text-white/60 hover:text-white transition-colors duration-200 rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-500"
+                className={`relative px-4 py-2 text-sm font-medium transition-colors duration-200 rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-500 ${
+                  isActive(link.href)
+                    ? "text-white"
+                    : "text-white/60 hover:text-white"
+                }`}
               >
                 {link.label}
+                {isActive(link.href) && (
+                  <span className="absolute bottom-0.5 left-1/2 -translate-x-1/2 w-1 h-1 rounded-full bg-amber-500" />
+                )}
               </Link>
             ))}
           </nav>
@@ -97,8 +110,9 @@ export default function Navbar() {
             onClick={() => setMobileOpen((v) => !v)}
             className="md:hidden p-2 text-white/70 hover:text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-500 rounded-sm"
             aria-label={mobileOpen ? "Close menu" : "Open menu"}
+            aria-expanded={mobileOpen}
           >
-            {mobileOpen ? <X size={22} /> : <Menu size={22} />}
+            {mobileOpen ? <X size={20} /> : <Menu size={20} />}
           </button>
         </div>
       </div>
@@ -107,20 +121,23 @@ export default function Navbar() {
       <AnimatePresence>
         {mobileOpen && (
           <motion.div
-            key="mobile-menu"
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.3, ease: "easeOut" }}
-            className="md:hidden overflow-hidden bg-[#111111] border-t border-white/5"
+            transition={{ duration: 0.25, ease: "easeInOut" }}
+            className="md:hidden overflow-hidden bg-[#0a0a0a]/98 backdrop-blur-md border-b border-white/5"
           >
-            <nav className="flex flex-col px-6 py-4 gap-1">
+            <nav className="max-w-7xl mx-auto px-6 py-4 flex flex-col gap-1">
               {navLinks.map((link) => (
                 <Link
                   key={link.href}
                   href={getHref(link.href)}
                   onClick={(e) => handleAnchorClick(e, link.href)}
-                  className="py-3 text-base font-medium text-white/70 hover:text-white border-b border-white/5 last:border-0 transition-colors duration-200"
+                  className={`px-3 py-3 text-sm font-medium transition-colors duration-200 rounded-sm border-b border-white/5 last:border-0 ${
+                    isActive(link.href)
+                      ? "text-amber-500"
+                      : "text-white/60 hover:text-white"
+                  }`}
                 >
                   {link.label}
                 </Link>
@@ -128,7 +145,7 @@ export default function Navbar() {
               <Link
                 href={getHref(CTA_HREF)}
                 onClick={(e) => handleAnchorClick(e, CTA_HREF)}
-                className="mt-4 px-5 py-3 bg-amber-500 text-black text-sm font-bold rounded-sm text-center hover:bg-amber-400 transition-colors duration-200"
+                className="mt-3 px-5 py-3 bg-amber-500 text-black text-sm font-bold rounded-sm hover:bg-amber-400 transition-all duration-200 text-center"
               >
                 {CTA_LABEL}
               </Link>

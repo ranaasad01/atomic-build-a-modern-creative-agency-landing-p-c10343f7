@@ -1,7 +1,6 @@
 "use client";
 
-import { NextIntlClientProvider } from "next-intl";
-import type { AbstractIntlMessages } from "next-intl";
+import { NextIntlClientProvider, type AbstractIntlMessages } from "next-intl";
 import { createContext, useContext, useEffect, useState, type ReactNode } from "react";
 import en from "@/messages/en.json";
 import es from "@/messages/es.json";
@@ -30,7 +29,7 @@ export default function LocaleProvider({ children }: { children: ReactNode }) {
     setLocaleState(l);
     try { localStorage.setItem("site_locale", l); } catch {}
   };
-  const messages = MESSAGES[locale] || MESSAGES[DEFAULT_LOCALE] || {};
+  const messages: AbstractIntlMessages = MESSAGES[locale] || MESSAGES[DEFAULT_LOCALE] || {};
   return (
     <LocaleCtx.Provider value={{ locale, setLocale, locales: LOCALES }}>
       <NextIntlClientProvider
