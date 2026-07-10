@@ -1,0 +1,45 @@
+{
+  "about": {
+    "body1": "Somos un equipo de diseñadores, estrategas y desarrolladores obsesionados con crear experiencias digitales que impacten. Desde 2018, hemos trabajado con marcas visionarias para convertir ideas audaces en realidad.",
+    "body2": "Cada proyecto comienza con curiosidad. Profundizamos en tu visión, cuestionamos suposiciones y construimos soluciones que no solo se ven bien, sino que funcionan mejor y más inteligentemente.",
+    "heading": "Acerca de Northwind",
+    "label": "Nuestra Historia",
+    "point1": "Enfoque estratégico en cada proyecto",
+    "point2": "Creatividad galardonada en digital e impreso",
+    "point3": "Asociaciones colaborativas que se sienten como una extensión de tu equipo"
+  },
+  "clients": {
+    "label": "Confiado por marcas líderes"
+  },
+  "contact": {
+    "fieldEmail": "Correo electrónico",
+    "fieldMessage": "Mensaje",
+    "fieldName": "Nombre",
+    "heading": "Creemos algo extraordinario",
+    "label": "Ponte en Contacto",
+    "placeholderEmail": "hola@tuempresa.com",
+    "placeholderMessage": "Cuéntanos sobre tu proyecto...",
+    "placeholderName": "Tu nombre",
+    "submit": "Enviar Mensaje",
+    "subtext": "Generalmente respondemos dentro de 24 horas. Hablemos sobre qué sigue.",
+    "successBody": "Gracias por comunicarte. Nos pondremos en contacto pronto.",
+    "successTitle": "Mensaje enviado"
+  },
+  "hero": {
+    "headline1": "Diseño que",
+    "headline2": "exige atención",
+    "headline3": "Creamos experiencias digitales audaces para marcas que se rehúsan a pasar desapercibidas.",
+    "label": "Agencia Creativa",
+    "subtext": "Estrategia, diseño y desarrollo para marcas con algo que decir.",
+    "viewWork": "Ver Nuestro Trabajo"
+  },
+  "services": {
+    "heading": "Qué Hacemos",
+    "label": "Servicios"
+  },
+  "work": {
+    "heading": "Trabajos Seleccionados",
+    "label": "Nuestros Proyectos",
+    "subtext": "Una selección de proyectos recientes que muestran nuestro enfoque en estrategia, diseño y ejecución."
+  }
+}

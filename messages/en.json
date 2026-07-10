@@ -1,0 +1,45 @@
+{
+  "about": {
+    "body1": "We're a team of designers, strategists, and developers obsessed with crafting digital experiences that move people. Since 2018, we've partnered with forward-thinking brands to turn bold ideas into reality.",
+    "body2": "Every project starts with curiosity. We dig deep into your vision, challenge assumptions, and build solutions that don't just look good—they work harder and smarter.",
+    "heading": "About Northwind",
+    "label": "Our Story",
+    "point1": "Strategy-first approach to every brief",
+    "point2": "Award-winning creative across digital and print",
+    "point3": "Collaborative partnerships that feel like an extension of your team"
+  },
+  "clients": {
+    "label": "Trusted by leading brands"
+  },
+  "contact": {
+    "fieldEmail": "Email",
+    "fieldMessage": "Message",
+    "fieldName": "Name",
+    "heading": "Let's create something great",
+    "label": "Get in Touch",
+    "placeholderEmail": "hello@yourcompany.com",
+    "placeholderMessage": "Tell us about your project...",
+    "placeholderName": "Your name",
+    "submit": "Send Message",
+    "subtext": "We typically respond within 24 hours. Let's talk about what's next.",
+    "successBody": "Thanks for reaching out. We'll be in touch soon.",
+    "successTitle": "Message sent"
+  },
+  "hero": {
+    "headline1": "Design that",
+    "headline2": "demands attention",
+    "headline3": "We craft bold digital experiences for brands that refuse to blend in.",
+    "label": "Creative Agency",
+    "subtext": "Strategy, design, and development for brands with something to say.",
+    "viewWork": "View Our Work"
+  },
+  "services": {
+    "heading": "What We Do",
+    "label": "Services"
+  },
+  "work": {
+    "heading": "Selected Work",
+    "label": "Our Projects",
+    "subtext": "A selection of recent projects that showcase our approach to strategy, design, and execution."
+  }
+}
